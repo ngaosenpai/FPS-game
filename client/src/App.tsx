@@ -7,6 +7,7 @@ import Loading from './components/Loading'
 import ErrorBoundaryLogger from './components/ErrorBoundary'
 
 const Home = lazy(() => import('./pages/Home'))
+const InGame = lazy(() => import('./pages/InGame'))
 
 function App() {
 
@@ -20,7 +21,7 @@ function App() {
         }>
           <Routes>
               <Route path='/' element={ <Home /> } />
-
+              <Route path='/match' element={ <InGame /> } />
           </Routes>
         </Suspense>
       </ErrorBoundaryLogger>
